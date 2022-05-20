@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    
+    <style>
+
+        .openbtn{
+            font-size: 20px;
+            /* cursor: pointer; */
+            background-color: #ffff;
+            /* color: white; */
+            /* padding: 10px 15px; */
+            border: none;
+        }
+        /* .openbtn :hover{
+            background-color: #444;
+        } */
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="mySidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <img style="height: 35px; width: 20px;" class="logo1" src="./images/CTM-PNG-Logo.png"></img>
+                    <div id="1" class="logo_name">CTM</div>
+                </div>
+            </div>
+            <hr>
+        <div id="sidebarProfile" class="dashboard_profile_image">
+            <img style="height: 40px; width: 40px;" class="sidebar_image" src="./images/user2-160x160.jpg"></img>
+            <div id="2" class="profile_image_name">Admin Ada</div>
+        </div>
+        <hr>
+        <ul id="ulList" class="nav_list" style="list-style: none;">
+            <li>
+                <a href="#" class="dashboardLink">
+                    <i class="ion-pie-graph icon1"></i>
+                    <span id="3" class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class='ion-location icon1'></i>
+                    <span id="4" class="links_name">Locations</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class='ion-document-text icon1'></i>
+                    <span id="5" class="links_name">Master Page</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class='ion-scissors icon1'></i>
+                    <span id="6" class="links_name">Knitting</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class='ion-scissors icon1'></i>
+                    <span id="7" class="links_name">Knitting Reports</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class='ion-clipboard icon1'></i>
+                    <span id="8" class="links_name">Finishing</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class='ion-clipboard icon1'></i>
+                    <span id="9" class="links_name">Finishing Reports</span>
+                </a>
+            </li>
+            <li>
+                <a> 
+                    <i class="ion-gear-b icon1"></i>
+                   <span id="10" class="links_name">Setups</span>
+                </a>
+            </li>
+        </ul>
+        </div>
+        <div  class="navbar" id="nav">
+            <div id="main">
+
+                <!-- <i ></i> -->
+                <button id="navIcon" class="openbtn ion-navicon-round navigationIcon" onclick="closeNav()"></button>
+            </div>
+            <i class="ion-person userIcon"></i>
+        </div>
+
+        <!-- <div class="content">
+            <h1>dashboard</h1>
+        </div> -->
+        <div id="foot" class="footer">
+            <footer>
+                <p class="footername">© 2021 CTM . All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        // function toggleMenu(){
+        //     let toggle =document.querySelector('.toggle');
+        //     let sidebar =document.querySelector('.sidebar');
+
+        //     toggle.classList.toggle('active')
+        //     sidebar.classList.toggle('active')
+
+        // }
+
+ function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "80px";
+  document.getElementById("main").style.marginLeft= "80px";
+//   document.getElementById("ulList").style.visibility="hidden";
+  document.getElementById("1").style.visibility="hidden";
+  document.getElementById("2").style.visibility="hidden";
+  document.getElementById("3").style.visibility="hidden";
+  document.getElementById("4").style.visibility="hidden";
+  document.getElementById("5").style.visibility="hidden";
+  document.getElementById("6").style.visibility="hidden";
+  document.getElementById("7").style.visibility="hidden";
+  document.getElementById("8").style.visibility="hidden";
+  document.getElementById("9").style.visibility="hidden";
+  document.getElementById("10").style.visibility="hidden";
+//   document.getElementById("nav").style.marginBlockEnd="500px"
+document.getElementById("nav").style.gridTemplateColumns = "1fr 4fr"
+document.getElementById("nav").style.gridTemplateRows = "1fr 4fr"
+document.getElementById("nav").style.margin="0px 0px 0px 100px";
+document.getElementById("nav").style.padding="8px";
+//   document.getElementById("nav").style.gridColumn = "2/3";
+
+  document.getElementById("foot").style.paddingRight="300px";
+  document.getElementById("navIcon").style.paddingRight="154px";
+
+//   grid-template-columns: 1fr 4fr;
+//     grid-template-rows: 1fr 0.1fr;
+//   for (let index = 1; index <= 10; index++) {
+//     //   const element = array[index];
+//     document.getElementById(index).style.visibility="hidden";
+      
+//   }
+//   document.getElementsByClassName("links_name").style.visibility="hidden";
+}
+    </script>
+</body>
+</html>

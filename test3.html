@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="./test3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <style>
+        .openbtn {
+            font-size: 25px;
+            /* cursor: pointer; */
+            background-color: #ffff;
+            /* color: white; */
+            padding: 10px 10px;
+            border: none;
+        }
+
+        .newNav {
+            background-color: #ffff;
+            grid-row: 1/2;
+            max-height: 62px;
+            width: 1440px;
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .newNavigationIcon {
+            font-size: 25px;
+            float: left;
+            margin-trim: 20px;
+            /* margin-left: 0px; */
+            /* margin-left:; */
+            
+            /* margin-top: 10px; */
+            /* margin-bottom: 17px; */
+            /* padding-right: 100px; */
+        }
+
+        .newContent{
+            grid-row: 2/3;
+            grid-column: 2/3;
+            background: #F4F6F9;
+            /* padding-top: 80px; */
+            padding-left: 10px; 
+             padding-right: 10px;
+            height: 100%;
+            /* border: none; */
+            /* padding: 0px 10px; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="mySidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <img style="height: 35px; width: 20px;" class="logo1" src="./images/CTM-PNG-Logo.png"></img>
+                    <div id="1" class="logo_name">CTM</div>
+                </div>
+            </div>
+            <hr>
+            <div id="sidebarProfile" class="dashboard_profile_image">
+                <img  class="sidebar_image" src="./images/user2-160x160.jpg"></img>
+                <div id="2" class="profile_image_name">Admin Ada</div>
+            </div>
+            <hr>
+            <ul id="ulList" class="nav_list" style="list-style: none;">
+                <li class="mainlist">
+                    <a href="#" class="dashboardLink">
+                        <i class="ion-pie-graph icon1"></i>
+                        <span id="3" class="links_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-btn mainlist">
+                        <div>
+                            <i class='ion-location icon1'></i>
+                            <span id="4" class="links_name">Locations</span>
+                            <i id="14" class="ion-arrow-down-b ddIconPadding"></i>
+                        </div>
+                    </a>
+                    <!-- <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Category</a></li>
+                        <li><a href="#">HTML & CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">PHP & MySQL</a></li>
+                      </ul> -->
+
+                      <!-- <ul>
+                        <li>New Service 1</li>
+                        <li>New Service 2</li>
+                        <li>New Service 3</li>
+                      </ul> -->
+                      <div class="sub-menu">
+                          <ul>
+                              <li class="submenulist">
+                                <a  class="submenuA" href="">  
+                                    <i id="i1" class="ion-ios-circle-outline icon2"></i>
+                                  <span id="11" class="submenuName">State</span>   
+                                   </a>
+                              </li>
+                              <li class="submenulist">
+                                <a class="submenuA" href="">
+                                    <i id="i2" class="ion-ios-circle-outline icon2"></i>
+
+                                    <span id="12" class="submenuName">District</span>
+                                </a>
+                              </li>
+                              <li class="submenulist">
+                                <a  class="submenuA" href="">
+                                    <i id="i3" class="ion-ios-circle-outline icon2"></i>
+
+                                    <span id="13" class="submenuName">Area / City</span>
+                                    </a>
+                              </li>
+                          </ul>
+                         
+                         
+                          
+
+                      </div>
+                      
+                </li>
+                <li class="mainlist">
+                    <a>
+                        <i class='ion-document-text icon1'></i>
+                        <span id="5" class="links_name">Master Page</span>
+                    </a>
+                </li>
+                <li class="mainlist">
+                    <a>
+                        <i class='ion-scissors icon1'></i>
+                        <span id="6" class="links_name">Knitting</span>
+                    </a>
+                </li>
+                <li class="mainlist">
+                    <a>
+                        <i class='ion-scissors icon1'></i>
+                        <span id="7" class="links_name">Knitting Reports</span>
+                    </a>
+                </li>
+                <li class="mainlist">
+                    <a>
+                        <i class='ion-clipboard icon1'></i>
+                        <span id="8" class="links_name">Finishing</span>
+                    </a>
+                </li>
+                <li class="mainlist">
+                    <a>
+                        <i class='ion-clipboard icon1'></i>
+                        <span id="9" class="links_name">Finishing Reports</span>
+                    </a>
+                </li>
+                <li class="mainlist">
+                    <a>
+                        <i class="ion-gear-b icon1"></i>
+                        <span id="10" class="links_name">Setups</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="navbar" id="nav">
+            <div id="main">
+                <!-- <i ></i> -->
+                <button id="navIcon" class="openbtn ion-navicon-round navigationIcon" onclick="doSomething()"></button>
+            </div>
+            <div class="dropdown">
+                <a class="dropBtn" href="#">
+                  <i class="ion-person userIcon"></i>
+                </a>
+                <div class="drop-content">
+                    <li>
+                        <a class="profileText">PROFILE</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <i class="ion-person pdIcon"></i>
+                        <span class="pdLink">Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <i class="ion-document-text pdIcon"></i>
+                        <span class="pdLink">Logout</span>
+                        </a>
+                    </li>
+                </div>
+              </div>
+            <!-- <i class="ion-person userIcon"></i> -->
+        </div>
+    
+        
+        <div id="contentId" class="content">
+            <p class="dashboardText">Dashboard </p>
+            <br>
+            <div class="row">
+                <div class="column column1">
+                  <!-- <h2>Column 1</h2>
+                  <p>Some text..</p> -->
+                  <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+
+                </div>
+                <div class="column column2">
+                  <!-- <h2>Column 2</h2>
+                  <p>Some text..</p> -->
+                  <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="column column3">
+                  <!-- <h2>Column 3</h2>
+                  <p>Some text..</p> -->
+                  <canvas id="myChart3" style="width:100%;max-width:250px; margin-left: 100px;" ></canvas>
+
+                </div>
+                <div class="column column4">
+                    <div id="myPlot" style="width:100%;max-width:700px;height: 300px;"></div>
+
+                </div>
+              </div>
+              
+          
+        </div>
+       
+        <div id="foot" class="footer">
+            <footer>
+                <p class="footername">© 2021 CTM . All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        // function toggleMenu(){
+        //     let toggle =document.querySelector('.toggle');
+        //     let sidebar =document.querySelector('.sidebar');
+
+        //     toggle.classList.toggle('active')
+        //     sidebar.classList.toggle('active')
+
+        // }
+        var clicked = true;
+
+        function doSomething(){
+            if(clicked){
+                // console.log("In true")
+            document.getElementById("mySidebar").style.width = "80px";
+            // document.getElementById("main").style.marginLeft = "80px";
+            document.getElementById("1").style.visibility = "hidden";
+            document.getElementById("2").style.visibility = "hidden";
+            document.getElementById("3").style.visibility = "hidden";
+            document.getElementById("4").style.visibility = "hidden";
+            document.getElementById("5").style.visibility = "hidden";
+            document.getElementById("6").style.visibility = "hidden";
+            document.getElementById("7").style.visibility = "hidden";
+            document.getElementById("8").style.visibility = "hidden";
+            document.getElementById("9").style.visibility = "hidden";
+            document.getElementById("10").style.visibility = "hidden";
+            document.getElementById("11").style.visibility = "hidden";
+            document.getElementById("12").style.visibility = "hidden";
+            document.getElementById("13").style.visibility = "hidden";
+            document.getElementById("14").style.visibility = "hidden";
+
+
+            document.getElementById("foot").style.paddingRight = "300px";
+            document.getElementById("nav").classList.remove("navbar");
+            document.getElementById("nav").classList.add("newNav");
+            document.getElementById("navIcon").classList.remove("navigationIcon");
+            document.getElementById("navIcon").classList.add("newNavigationIcon");
+            document.getElementById("contentId").classList.remove("content");
+            document.getElementById("contentId").classList.add("newContent");
+            // document.getElementById("a1").classList.remove("submenuA");
+            // document.getElementById("a2").classList.remove("submenuA");
+            // document.getElementById("a3").classList.remove("submenuA");
+            document.getElementById("i1").classList.remove("icon3");
+            document.getElementById("i2").classList.remove("icon3");
+            document.getElementById("i3").classList.remove("icon3");
+            document.getElementById("14").classList.remove("ion-arrow-down-b");
+            document.getElementById("14").classList.remove("ddIconPadding");
+            document.getElementById("11").classList.remove("submenuName");
+            document.getElementById("12").classList.remove("submenuName");
+            document.getElementById("13").classList.remove("submenuName");
+
+
+            clicked = false
+        }
+            else{
+                console.log("In false")
+                document.getElementById("1").style.visibility = "visible";
+                document.getElementById("2").style.visibility = "visible";
+                document.getElementById("3").style.visibility = "visible";
+                document.getElementById("4").style.visibility = "visible";
+                document.getElementById("5").style.visibility = "visible";
+                document.getElementById("6").style.visibility = "visible";
+                document.getElementById("7").style.visibility = "visible";
+                document.getElementById("8").style.visibility = "visible";
+                document.getElementById("9").style.visibility = "visible";
+                document.getElementById("10").style.visibility = "visible";
+                document.getElementById("11").style.visibility = "visible";
+                document.getElementById("12").style.visibility = "visible";
+                document.getElementById("13").style.visibility = "visible";
+                document.getElementById("14").style.visibility = "visible";
+
+                // document.getElementById("mySidebar").style.width = "250px";
+
+                
+                // document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("nav").classList.remove("newNav");
+                document.getElementById("nav").classList.add("navbar");
+                document.getElementById("navIcon").classList.remove("newNavigationIcon");
+                document.getElementById("navIcon").classList.add("navigationIcon");
+                // document.getElementById("a1").classList.add("newsubmenuA");
+                // document.getElementById("a2").classList.add("newsubmenuA");
+                // document.getElementById("a3").classList.add("newsubmenuA");
+                document.getElementById("i1").classList.add("icon3");
+                document.getElementById("i2").classList.add("icon3");
+                document.getElementById("i3").classList.add("icon3");
+                document.getElementById("14").classList.add("ion-arrow-down-b");
+                document.getElementById("14").classList.add("ddIconPadding");
+                document.getElementById("11").classList.add("submenuName");
+                document.getElementById("12").classList.add("submenuName");
+                document.getElementById("13").classList.add("submenuName");
+
+
+                document.getElementById("mySidebar").style.cssText = `
+                transition-property: width;
+                transition-duration: 1s;
+                width = 250px; 
+                `;
+                clicked = true
+            }
+            clicked != clicked;
+        }
+
+        // function openNav() {
+
+        // }
+        // function closeNav() {
+            
+        // }
+
+
+        var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+new Chart("myChart1", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "red",
+      fill: false
+    }, { 
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "green",
+      fill: false
+    }, { 
+      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      borderColor: "blue",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+
+var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart2", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    }
+  }
+});
+
+
+var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart3", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+
+
+var exp1 = "x";
+var exp2 = "1.5*x";
+var exp3 = "1.5*x + 7";
+// Generate values
+
+var x1Values = [];
+var x2Values = [];
+var x3Values = [];
+var y1Values = [];
+var y2Values = [];
+var y3Values = [];
+
+for (var x = 0; x <= 10; x += 1) {
+  x1Values.push(x);
+  x2Values.push(x);
+  x3Values.push(x);
+  y1Values.push(eval(exp1));
+  y2Values.push(eval(exp2));
+  y3Values.push(eval(exp3));
+}
+
+// Define Data
+var data = [
+  {x: x1Values, y: y1Values, mode:"lines"},
+  {x: x2Values, y: y2Values, mode:"lines"},
+  {x: x3Values, y: y3Values, mode:"lines"}
+];
+
+//Define Layout
+var layout = {title: "[y=" + exp1 + "]  [y=" + exp2 + "]  [y=" + exp3 + "]"};
+
+// Display using Plotly
+Plotly.newPlot("myPlot", data, layout);
+
+// sidebar dropdown
+$(document).ready(function(){
+    $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+    });
+});
+
+        
+    </script>
+</body>
+
+</html>
